@@ -26,6 +26,7 @@ function scanr()
         }
         	else
         {
+                unlink($f);
         	echo " Failed!";
         }
 
