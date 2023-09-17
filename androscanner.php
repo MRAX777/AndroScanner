@@ -1,6 +1,11 @@
 <?php
 function scanr()
 {
+
+    
+    shell_exec("fusermount -u /home/ax/MyAndroid");
+    shell_exec("go-mtpfs /home/ax/MyAndroid");
+    
     $Directory = new RecursiveDirectoryIterator("/home/ax/MyAndroid/");
     $Iterator = new RecursiveIteratorIterator($Directory);
     $Regex = new RegexIterator(
@@ -26,7 +31,7 @@ function __destruct()
 {
     shell_exec("fusermount -u /home/ax/MyAndroid");
     shell_exec("go-mtpfs /home/ax/MyAndroid");
-    shell_exec("php /home/ax/andscanner.php");
+    shell_exec("php /home/ax/androscanner.php");
 }
 
 scanr();
