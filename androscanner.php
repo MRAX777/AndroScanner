@@ -22,8 +22,13 @@ function scanr()
         }
         if (filesize($r[0]) == filesize($f)) {
             unlink($r[0]);
+            echo " Moved!\n";
         }
-        echo " Moved!\n";
+        	else
+        {
+        	echo " Failed!";
+        }
+
         sleep(1);
     }
 }
